@@ -35,9 +35,9 @@ The script will output a short configuration block which should be placed manual
     # primary interface
     auto eth0
     iface eth0 inet static
-      address 10.0.1.100
+      address 192.168.22.102
       netmask 255.255.255.0
-      gateway 10.0.1.1
+      gateway 192.168.22.1
       dns-nameservers 8.8.8.8
 
     # ipv6 configuration
@@ -46,8 +46,8 @@ The script will output a short configuration block which should be placed manual
 You will also need to edit your /etc/hosts file to contain an entry for your controller and any compute rigs.  Here's an example:
 
     127.0.0.1   localhost
-    10.0.1.100  hanoman
-    10.0.1.101  ravana
+    192.168.22.102  hanuman
+    192.168.22.104  ravana
 
 Reboot the rig after saving the file.
 
@@ -230,9 +230,9 @@ This guide completely ignores the [Neutron/Quantum project](https://wiki.opensta
 
 ***Note: If you want to run IPv4 + IPv6, please skip to the next section and do NOT run this section's commands.***
 
-Begin by creating an IPv4 private network range which blocks out the **10.0.47.0** network (assuming the ethernet interface is eth0):
+Begin by creating an IPv4 private network range which blocks out the **192.168.42.0** network (assuming the ethernet interface is eth0):
 
-    nova-manage network create private --fixed_range_v4=10.0.47.0/24 --num_networks=1 --bridge=br100 --bridge_interface=eth0 --network_size=255
+    nova-manage network create private --fixed_range_v4=192.168.42.0/24 --num_networks=1 --bridge=br100 --bridge_interface=eth0 --network_size=255
 
 You'll need to add a route in your router to point to the new network managed by the controller (pseudo command here):
 
