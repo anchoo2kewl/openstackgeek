@@ -90,7 +90,7 @@ EOF
 		echo;
 		echo "The following URL will be used for configuring the other rigs in this cluster.  Copy it."
 		echo;
-		cat setuprc | curl -F 'geek=<-' https://sgsprunge.appspot.com 
+		cat setuprc | curl -F 'ansh=<-' http://dbinpaste.appspot.com
 
 # again, don't unindent!
 # tack on an indicator we're the controller

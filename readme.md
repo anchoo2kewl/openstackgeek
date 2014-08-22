@@ -18,8 +18,8 @@ Remotely log into your new server and install *git* with *aptitude*:
 
 Checkout the StackGeek OpenStack setup scripts from Github:
 
-    git clone git://github.com/StackGeek/openstackgeek.git
-    cd openstackgeek/icehouse
+    git clone git://github.com/anchoo2kewl/openstackgeek.git
+    cd openstackgeek
 
 #### Network Interfaces
 You need to manually configure your ethernet interface to support a non-routable static IPv4 address and an auto configured IPv6 address.
@@ -86,7 +86,7 @@ Start the installation by running the setup script:
     
 You will be asked whether or not this rig is to be configured as a controller.  If you answer yes, the result of the setup will be a **setuprc** file in the install directory.  The setup script will also output a URL which is used to copy the existing setup to a compute rig.  Here's an example URL:
 
-    https://sgsprunge.appspot.com/I2DIkNZxJyPhhIJc
+    http://dbinpaste.appspot.com/I2DIkNZxJyPhhIJc
 
 If you indicated the rig is not a controller node, you will be prompted for the URL spit out by the controller installation as mentioned above.  Paste this URL in and hit enter to start the compute rig install.
 
@@ -340,6 +340,8 @@ An OpenStack Command Line Cheat Sheet is available on [Anystacker's site](http:/
 #### Delete the Paste File
 The URL created for a multi-rig install is stored on an AppEngine application based on [Rupa's sprunge project](http://github.com/rupa/sprunge).  You should delete the paste after you are done with your setup for security's sake:
 
-    curl -X DELETE https://sgsprunge.appspot.com/I2DIkNZxJyPhhIJc
+    curl -X DELETE http://dbinpaste.appspot.com/I2DIkNZxJyPhhIJc
 
-If you have any questions, issues or concerns, please feel free to join IRC, post on the forum, or create a ticket!
+-----------------------------------------------------------------------------------------------------------------
+
+Forked from [https://github.com/StackGeek/openstackgeek](StackGeek).
