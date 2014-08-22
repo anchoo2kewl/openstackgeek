@@ -101,6 +101,11 @@ Splunk will be configured to monitor the OpenStack packages logfiles.  You may a
 
     http://10.0.1.100:8000
 
+To change the PORT for splunk (Just because I needed to)
+
+    /opt/splunk/bin/splunk set web-port 8081
+    /opt/splunk/bin/splunk restart
+
 #### Database Setup (Controller Only)
 The next part of the setup installs MySQL and RabbitMQ.  **This is only required for the controller rig. Skip this step if you are setting up a compute rig for your cluster.** Start the install on the controller rig by typing:
 
